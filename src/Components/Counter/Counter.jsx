@@ -1,19 +1,33 @@
-import React,{useState} from 'react';
-import { Button, Card } from 'react-bootstrap';
-import "./Counter.css"
+import React, { useState } from "react";
+import { Button, Card, Row, Col } from "react-bootstrap";
+import "./Counter.css";
 
 export const Counter = () => {
-    const [count, setCount] = useState(0)
-    return(
-        <div>
-            <h1>Counter</h1>
-            <br />
-            <Card className="counter">
-            <Button className="btns" onClick={()=>setCount(count - 1)}>Isku click kare to minus me bhi ja sakte</Button>
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <h1>Counter</h1>
+      <br />
+      <Card className="counter">
+        <Row>
+          <Col>
+            <Button className="btns" onClick={() => setCount(count - 1)}>
+              +
+            </Button>
+          </Col>
+          <Col>
             <h3>{count}</h3>
-            <Button className="btns" onClick={()=>setCount(count + 1)}>Ispe Click kare to number badhte</Button>
-            <Button className="reset" onClick={()=>setCount(0)}>Phirse Zero karna hai to ispe click karo</Button>
-            </Card>
-        </div>
-    )
-}
+          </Col>
+          <Col>
+            <Button className="btns" onClick={() => setCount(count + 1)}>
+              -
+            </Button>
+          </Col>
+        </Row>
+        <Button className="reset" onClick={() => setCount(0)}>
+          Reset
+        </Button>
+      </Card>
+    </div>
+  );
+};
