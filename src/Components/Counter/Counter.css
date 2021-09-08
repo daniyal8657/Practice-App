@@ -14,10 +14,30 @@ h1{
     align-items: center;
     background-color: rgb(32,35,42);
     border:2px solid rgb(65,224,253);
+    color: rgb(65,224,253);
+}
+.reset{
+    border-radius: 0px;
+    align-items: center;
+    background-color: rgb(32,35,42);
+    border:2px solid rgb(65,224,253);
+    color: rgb(65,224,253);
+    margin-left: 200px;
+    margin: 20px ;
+
+
+}
+.reset:hover{
+    background-color: rgb(65,224,253);
+    border : 2px solid rgb(32,35,42);
+    color: rgb(32,35,42) ;
+
 }
 .btns:hover{
     background-color: rgb(65,224,253);
-    border : 2px solid rgb(32,35,42); 
+    border : 2px solid rgb(32,35,42);
+    color: rgb(32,35,42) ;
+
 }
 .counter{
     margin: 30px 500px ;

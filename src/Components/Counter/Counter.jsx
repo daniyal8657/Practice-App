@@ -12,6 +12,7 @@ export const Counter = () => {
             <Button className="btns" onClick={()=>setCount(count - 1)}>Isku click kare to minus me bhi ja sakte</Button>
             <h3>{count}</h3>
             <Button className="btns" onClick={()=>setCount(count + 1)}>Ispe Click kare to number badhte</Button>
+            <Button className="reset" onClick={()=>setCount(0)}>Phirse Zero karna hai to ispe click karo</Button>
             </Card>
         </div>
     )
