@@ -11,16 +11,20 @@ export const Counter = () => {
       <Card className="counter">
         <Row>
           <Col>
-            <Button className="btns" onClick={() => setCount(count - 1)}>
-              +
+            <Button className="btns" onClick={() => setCount(count - 1)}
+            disabled={true && count <= 0}
+            >
+              -
             </Button>
           </Col>
           <Col>
             <h3>{count}</h3>
           </Col>
           <Col>
-            <Button className="btns" onClick={() => setCount(count + 1)}>
-              -
+            <Button className="btns" onClick={() => setCount(count + 1)}
+            disabled={true && count >= 100}
+            >
+              +
             </Button>
           </Col>
         </Row>
