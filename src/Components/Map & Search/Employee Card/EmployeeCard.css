@@ -1,0 +1,14 @@
+.empcard{
+    margin: 20px;
+    /* flex-wrap: nowrap;
+    flex-direction: row; */
+    background-color: blueviolet;
+    border-radius: 0px;
+    border: 2px solid rgb(97,218,251);
+    color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px black;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+}

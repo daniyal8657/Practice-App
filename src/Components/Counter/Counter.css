@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100&display=swap');
 
-h1{
+body{
+    background-color: rgb(4, 97, 97);
+}
+
+.cntrhead{
     font-family: 'Urbanist', sans-serif;
     color: rgb(65,224,253);
     text-align: center;
@@ -40,7 +44,11 @@ h1{
 
 }
 .counter{
-    margin: 30px 500px ;
+    background-color: rgb(119, 217, 235);
+    border: rgb(3, 217, 255);
+    border-radius: 0px;
+    margin: 0px 500px ;
+    box-shadow: 0 0 10px black;
     text-align: center;
     padding: 10px;
 }

@@ -1,23 +1,32 @@
 import React from "react";
+import {BrowserRouter as Router, Switch,Route} from 'react-router-dom';
 import { Counter } from "./Components/Counter/Counter";
+import { EmiCalC } from "./Components/EMI Calculator/EmiCalC";
+import { Home } from "./Components/Home/Home";
+import { EmployeeList } from "./Components/Map & Search/Employee List/EmployeeList";
+import { NavigationBar } from "./Components/NavigationBar/NavigationBar";
 
 export const Landing = () => {
   return (
     <div>
-      {/* <h1
-        style={{
-          color: "rgb(65,224,253)",
-          margin: "250px",
-          textAlign: "center",
-          background: "rgb(32,35,42)",
-          padding: "30px",
-          boxShadow:"0 0 5px black",
-          border:"2px solid rgb(65,224,253)",
-        }}
-      >
-        Landing Page
-      </h1> */}
+      
+<Router>
+      <NavigationBar/>
+      <Switch>
+      <Route path="/Home">
+      <Home/>
+      </Route>
+      <Route path="/Counter">
       <Counter/>
+      </Route>
+      <Route path="/Employees">
+      <EmployeeList/>
+      </Route>
+      <Route path="/EmiCalc">
+      <EmiCalC/>
+      </Route>
+      </Switch>
+</Router>
     </div>
   );
 };

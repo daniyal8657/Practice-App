@@ -1,0 +1,10 @@
+.emplist{
+    background-color: rgb(33, 0, 63);
+    color: white;
+}
+.searchbar{
+    background-color: rgb(187, 139, 231);
+    color: blueviolet;
+    padding: 10px;
+    margin: auto;
+}
