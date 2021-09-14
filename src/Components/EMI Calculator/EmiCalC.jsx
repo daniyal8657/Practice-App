@@ -1,16 +1,25 @@
-import React,{useState,useEffect} from 'react';
-import { Card, Button, Row, Col, Form } from 'react-bootstrap';
+import React,{useState, useMemo} from 'react';
+import { Card, Row, Col, Form } from 'react-bootstrap';
 import './EmiCalC.css'
 
 export const EmiCalC = () => {
     const [p, setP] = useState()
     const [r, setR] = useState()
     const [n, setN] = useState()
-    const [emi, setEmi] = useState()
+    // const [emi, setEmi] = useState()
 
-useEffect(()=>{
-    setEmi((p*r*n)/100)
-},[p, r, n, emi])
+    const handleCalEmi = () => {
+        const si = (p *n*r)/100;
+        const repayAmt = Number(p) + Number(si);
+        const emiLocal = repayAmt / (n * 12);
+        return emiLocal;
+    }
+
+    const emi = useMemo(()=> handleCalEmi(), [p,r,n])
+
+// useEffect(()=>{
+//     handleCalEmi();
+// },[])
 
     return(
         <div className="calcdiv">
